@@ -1,0 +1,52 @@
+body {
+    background-image: url("https://i.imgur.com/CwXX8YM.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#entrar {
+    border-radius: 50px;
+    background-color: #fff;
+    width: 100px;
+
+}
+
+#entrar:hover {
+    box-shadow: 1px 10px 20px #7f6fad, 1px 10px 20px #b59ff2;
+    margin-top: -5px;
+
+}
+
+#entrar:active {
+    box-shadow: inset 1px 5px 15px #99c2ec;
+    margin-top: 2px;
+
+}
+
+.container-fluid {
+    max-width: 500px;
+    height: 400px;
+    min-height: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 1px 10px 20px;
+
+}
+
+label {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+hr{
+    color: rgba(138, 128, 128, 0.993);
+  }
+  #cont-tem{
+    color: #000;
+  }
+  #cadastrar{
+    text-decoration: none;
+  }
+  
