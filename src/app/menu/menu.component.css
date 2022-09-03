@@ -1,0 +1,138 @@
+body{
+  background-image: url("https://i.imgur.com/CwXX8YM.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar{
+  background-color: rgba(187, 95, 240, 0.644);
+  border-bottom: 1px solid #000;
+  box-shadow: 1px 10px 25px #000;
+}
+.menu-interno{
+  background-color: rgba(178, 97, 224, 0.616);
+}
+/*Input e icon de busca*/
+.search{
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+  background-color: rgba(255, 255, 255, 0.171);
+  box-shadow: 0 4px 4px -2px #070404;
+  -webkit-box-shadow: 0 4px 4px -2px #000000a1;
+  color: rgb(0, 0, 0);
+  width: 300px;
+}
+.search:hover{
+  background-color: rgba(119, 116, 116, 0.171);
+  box-shadow: 0 4px 4px -2px rgba(63, 62, 62, 0.336);
+  -webkit-box-shadow: 0 4px 4px -2px #000000a1;
+}
+.search:focus{
+  border: none;
+  box-shadow: 0 4px 4px -2px rgba(63, 62, 62, 0.336);
+  -webkit-box-shadow: inset 0 4px 4px -2px #000000a1;
+  border-radius: 2px;
+}
+
+.search-form{
+  position: relative;
+  cursor: pointer;
+}
+.fa-search{
+  position: absolute;
+  right: 0;
+  display: block;
+  margin: 0 7px 5px 0;
+}
+.fa-search:hover{
+  font-weight: bolder;
+}
+.fa-search:active{
+  font-weight: normal;
+  color: rgb(82, 80, 80);
+}
+.search::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+::placeholder{
+  color: rgb(49, 49, 49);
+  font-size: 13px;
+}
+/*fim search, o webkit foi para retirar o botao de cancelar*/
+
+/*Menu e foto*/
+.navbar-toggler{
+  outline: 0;
+  box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.589);
+}
+.navbar-toggler:active{
+  box-shadow: 0 4px 4px -2px #070404;
+  -webkit-box-shadow: inset 0 4px 4px -2px #000000a1;
+}
+.img-fluid{
+  cursor: pointer;
+  box-shadow: 0 4px 4px -2px #070404;
+  width: 35px;
+  height: 35px;
+  transition-property:all;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+}
+.img-fluid:hover{
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 10px -2px #070404;
+}
+.bi-basket-fill{
+  cursor: pointer;
+}
+.bi-basket-fill:hover{
+  width: 50px;
+  height: 50px;
+  transition-property:all;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+}
+.dropdown .dropdown-menu {
+  left: 50% !important;
+  transform: translate3d(-50%, 1px, 0px) !important;
+}
+.dropdown-menu{
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 10px;
+  box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.589);
+}
+.hr-sair{
+  width: 70%;
+  box-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.perfil{
+  margin-top: -21px;
+}
+.perfil:hover, .pedidos:hover, .sair:hover{
+  box-shadow: inset 1px 10px 5px 5px rgba(180, 179, 179, 0.397);
+}
+.usuario:hover{
+  background-color: rgba(255, 255, 255, 0);
+}
+.pedidos{
+  margin-top: -5px;
+}
+.sair{
+  margin-top: -10px;
+  text-align: center;
+  font-weight: bold;
+}
+.bi-pencil-square{
+  color: rgb(199, 107, 241);
+}
+.sacola, .vazio{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.bloco-sacola{
+  width: 190px;
+}

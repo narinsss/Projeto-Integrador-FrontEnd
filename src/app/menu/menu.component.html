@@ -1,17 +1,65 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DFC2F5">
-    <a class="navbar-brand" href="#">AcquaCode</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<body>
+  <nav class="navbar navbar-dark">
+    <img class="navbar-brand" src="https://i.imgur.com/fvDgynI.png" width="230px" height="70px">
+    <ul class="list-unstyled d-flex">
+      <li>
+        <div class="form-inline search-form d-flex mr-3 mt-2">
+          <input class="search" type="search" placeholder="O que você procura?" aria-label="Search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <div class="dropdown">
+          <img src="https://i.imgur.com/6yeHR7M.png" alt="Foto do user" class="dropdown-toggle img-fluid rounded-circle"
+            data-toggle="dropdown" aria-expanded="false">
+          <div class="dropdown-menu">
+            <p class="dropdown-item text-dark usuario">
+              Nome do usuário
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                  class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                  <path fill-rule="evenodd"
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg>
+              </a>
+            </p>
+
+            <a class="dropdown-item perfil text-dark" href="#">Meu perfil</a>
+            <a class="dropdown-item pedidos text-dark" href="#">Meus pedidos</a>
+            <hr class="hr-sair">
+            <a class="dropdown-item sair text-dark" routerLink="/entrar">Sair</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item carrinho">
+        <div class="dropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+            class="bi bi-basket-fill ml-2 mr-2" viewBox="0 0 16 16" data-toggle="dropdown" aria-expanded="false">
+            <path
+              d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z" />
+          </svg>
+          <div class="dropdown-menu bloco-sacola">
+            <p class=" text-dark vazio">
+              Seu carrinho está vazio!
+            </p>
+            <img class="sacola" src="https://i.imgur.com/ZZofpRw.png" alt="Sacola de compras ecológica." width="80px" height="80px">
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="navbar-toggler ml-1" type="button" data-toggle="collapse"
+          data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="menu-interno p-4">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -23,13 +71,7 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
-  </nav>
+  </div>
+</body>
