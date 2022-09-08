@@ -11,22 +11,22 @@
 
             <div class="form-group ">
                 <label for="nome">Nome</label>
-                <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                <input [(ngModel)]="user.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
 
                 <label for="usuario">Usuário</label>
-                <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
+                <input [(ngModel)]="user.usuario" class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
 
                 <label for="foto">Link da Foto</label>
-                <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua Foto">
+                <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua Foto">
 
                 <label for="senha">Senha</label>
-                <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
 
                 <label for="confirmeSenha">Confirmar Senha</label>
-                <input class="form-control" type="password" name="senha" id="senha" placeholder="Confirme sua senha">
+                <input [(ngModel)]="user.senha" class="form-control" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme sua senha">
 
                 <label for="tipo">Tipo de Usuário</label>
-                <select class="form-control" name="tipo" id="tipo">
+                <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUser($event)'>
                     <option>Selecione um tipo de usuário</option>
                     <option value="normal">Normal</option>
                     <option value="adm">Administrador</option>
@@ -37,7 +37,7 @@
                         <button type="submit" class="btn btn-light mb-3 " id="cancelar" routerLink='/entrar'>Cancelar</button>
                     </div>
                     <div class="ml-2">
-                         <button type="submit" class="btn btn-light mb-3 " id="cadastrar" >Cadastrar</button>
+                         <button type="submit" class="btn btn-light mb-3 " id="cadastrar" (click)="cadastrar()" >Cadastrar</button>
                     </div>
                 </div>
             </div>
