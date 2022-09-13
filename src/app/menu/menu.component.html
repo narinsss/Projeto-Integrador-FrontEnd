@@ -1,112 +1,107 @@
-<body>
-  <nav class="navbar navbar-dark">
-    <img class="navbar-brand" src="https://i.imgur.com/fvDgynI.png" width="230px" height="70px">
-    <ul class="list-unstyled d-flex">
-      <li class="srch">
-        <div class="form-inline search-form d-flex mr-3 mt-2">
-          <input class="search" type="search" placeholder="O que você procura?" aria-label="Search">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-      </li>
-      <li class="nav-item active">
-        <div class="dropdown">
-          <img src="https://i.imgur.com/6yeHR7M.png" alt="Foto do user" class="dropdown-toggle img-fluid rounded-circle"
-            data-toggle="dropdown" aria-expanded="false">
-          <div class="dropdown-menu">
-            <p class="dropdown-item text-dark usuario">
-              Nome do usuário
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                  class="bi bi-pencil-square" viewBox="0 0 16 16">
-                  <path
-                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                  <path fill-rule="evenodd"
-                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                </svg>
-              </a>
-            </p>
+<nav class="navbar navbar-expand-lg
+navbar-dark">
+  <img class="navbar-brand" src="https://i.imgur.com/fvDgynI.png" width="230px" height="70px">
+  <ul class="list-unstyled d-flex">
+    <li class="srch">
+      <div class="form-inline search-form d-flex mr-3 mt-2">
+        <input class="search" type="search" placeholder="O que você procura?" aria-label="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </li>
+    <li class="nav-item active">
+      <div class="dropdown">
+        <img src="https://i.imgur.com/6yeHR7M.png" alt="Foto do user" class="dropdown-toggle img-fluid rounded-circle"
+          data-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown-menu">
+          <p class="dropdown-item text-dark usuario">
+            Nome do usuário
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+              </svg>
+            </a>
+          </p>
 
-            <a class="dropdown-item perfil text-dark" href="#">Meu perfil</a>
-            <a class="dropdown-item pedidos text-dark" href="#">Meus pedidos</a>
-            <hr class="hr-sair">
-            <a class="dropdown-item sair text-dark" routerLink="/entrar">Sair</a>
-          </div>
+          <a class="dropdown-item perfil text-dark" href="#">Meu perfil</a>
+          <a class="dropdown-item pedidos text-dark" href="#">Meus pedidos</a>
+          <hr class="hr-sair">
+          <a class="dropdown-item sair text-dark" routerLink="/entrar">Sair</a>
         </div>
-      </li>
-      <li class="nav-item carrinho ml-4 mr-4">
-        <div class="dropdown">
-          <img id="carrinho" src="https://i.imgur.com/r6kMN8t.png" alt="" width="35" height="35" data-toggle="dropdown"
-            aria-expanded="false">
-          <div class="dropdown-menu bloco-sacola">
-            <p class=" text-dark vazio">
-              Seu carrinho está vazio!
-            </p>
-            <img class="sacola" src="https://i.imgur.com/ZZofpRw.png" alt="Sacola de compras ecológica." width="80px"
-              height="80px">
-          </div>
+      </div>
+    </li>
+    <li class="nav-item carrinho ml-4 mr-4">
+      <div class="dropdown">
+        <img id="carrinho" src="https://i.imgur.com/r6kMN8t.png" alt="" width="35" height="35" data-toggle="dropdown"
+          aria-expanded="false">
+        <div class="dropdown-menu bloco-sacola">
+          <p class=" text-dark vazio">
+            Seu carrinho está vazio!
+          </p>
+          <img class="sacola" src="https://i.imgur.com/ZZofpRw.png" alt="Sacola de compras ecológica." width="80px"
+            height="80px">
         </div>
-      </li>
-      <li>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart"
-          viewBox="0 0 16 16">
-          <path
-            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-        </svg>
-      </li>
+      </div>
+    </li>
+    <li>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart"
+        viewBox="0 0 16 16">
+        <path
+          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+      </svg>
+    </li>
 
-    </ul>
-  </nav>
-  <nav class="nav-interna navbar navbar-expand-lg">
-    <button class="navbar-toggler m-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+  </ul>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <div class="collapse navbar-collapse col-md-12 ul" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
-      id="navbarScroll">
-        <li class="li feminina"><a href="#">Moda Feminina</a>
-          <ul class="dropdown ul2 p-2">
-            <li class="li2"><a href="#">Web Development</a></li>
-            <li class="li2"><a href="#">Web Design</a></li>
-            <li class="li2"><a href="#">Illustration</a></li>
-            <li class="li2"><a href="#">Iconography</a></li>
-          </ul>
-        </li>
-        <li class="li text-dark masculina"><a href="#">Moda Masculina</a>
-          <ul class="dropdown ul2 p-2">
-            <li class="li2"><a href="#">Web Development</a></li>
-            <li class="li2"><a href="#">Web Design</a></li>
-            <li class="li2"><a href="#">Illustration</a></li>
-            <li class="li2"><a href="#">Iconography</a></li>
-          </ul>
-        </li>
-        <li class="li  text-dark infantil"><a href="#">Moda Infantil</a>
-          <ul class="dropdown ul2 p-2">
-            <li class="li2"><a href="#">Web Development</a></li>
-            <li class="li2"><a href="#">Web Design</a></li>
-            <li class="li2"><a href="#">Illustration</a></li>
-            <li class="li2"><a href="#">Iconography</a></li>
-          </ul>
-        </li>
-        <li class="li text-dark acessorios"><a href="#">Acessórios</a>
-          <ul class="dropdown ul2 p-3">
-            <li class="li2"><a href="#">Web Development</a></li>
-            <li class="li2"><a href="#">Web Design</a></li>
-            <li class="li2"><a href="#">Illustration</a></li>
-            <li class="li2"><a href="#">Iconography</a></li>
-          </ul>
-        </li>
-        <li class="li text-dark saude"><a href="#">Saúde e Beleza</a>
-          <ul class="dropdown ul2 p-2">
-            <li class="li2"><a href="#">Web Development</a></li>
-            <li class="li2"><a href="#">Web Design</a></li>
-            <li class="li2"><a href="#">Illustration</a></li>
-            <li class="li2"><a href="#">Iconography</a></li>
-          </ul>
-        </li>
-    </div>
-  </nav>
+</nav>
+<nav class="navbar navbar-expand-lg nav-interna">
+  <div class="collapse navbar-collapse ul" id="navbarSupportedContent">
+      <li class="li feminina"><a href="#">Moda Feminina</a>
+        <ul class="dropdown ul2 p-2">
+          <li class="li2"><a href="#">Web Development</a></li>
+          <li class="li2"><a href="#">Web Design</a></li>
+          <li class="li2"><a href="#">Illustration</a></li>
+          <li class="li2"><a href="#">Iconography</a></li>
+        </ul>
+      </li>
+      <li class="li text-dark masculina"><a href="#">Moda Masculina</a>
+        <ul class="dropdown ul2 p-2">
+          <li class="li2"><a href="#">Web Development</a></li>
+          <li class="li2"><a href="#">Web Design</a></li>
+          <li class="li2"><a href="#">Illustration</a></li>
+          <li class="li2"><a href="#">Iconography</a></li>
+        </ul>
+      </li>
+      <li class="li  text-dark infantil"><a href="#">Moda Infantil</a>
+        <ul class="dropdown ul2 p-2">
+          <li class="li2"><a href="#">Web Development</a></li>
+          <li class="li2"><a href="#">Web Design</a></li>
+          <li class="li2"><a href="#">Illustration</a></li>
+          <li class="li2"><a href="#">Iconography</a></li>
+        </ul>
+      </li>
+      <li class="li text-dark acessorios"><a href="#">Acessórios</a>
+        <ul class="dropdown ul2 p-3">
+          <li class="li2"><a href="#">Web Development</a></li>
+          <li class="li2"><a href="#">Web Design</a></li>
+          <li class="li2"><a href="#">Illustration</a></li>
+          <li class="li2"><a href="#">Iconography</a></li>
+        </ul>
+      </li>
+      <li class="li text-dark saude"><a href="#">Saúde e Beleza</a>
+        <ul class="dropdown ul2 p-2">
+          <li class="li2"><a href="#">Web Development</a></li>
+          <li class="li2"><a href="#">Web Design</a></li>
+          <li class="li2"><a href="#">Illustration</a></li>
+          <li class="li2"><a href="#">Iconography</a></li>
+        </ul>
+      </li>
+  </div>
 
-
-
-</body>
+</nav>
