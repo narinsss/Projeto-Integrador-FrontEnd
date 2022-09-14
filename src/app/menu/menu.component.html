@@ -10,42 +10,91 @@ navbar-dark">
     </li>
     <li class="nav-item active">
       <div class="dropdown">
-        <img src="https://i.imgur.com/6yeHR7M.png" alt="Foto do user" class="dropdown-toggle img-fluid rounded-circle"
+        <img src="{{foto}}" alt="Foto do user" class="dropdown-toggle img-fluid rounded-circle"
           data-toggle="dropdown" aria-expanded="false">
         <div class="dropdown-menu">
           <p class="dropdown-item text-dark usuario">
-            Nome do usuário
+            {{nome}}
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+              <!--<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
                 class="bi bi-pencil-square" viewBox="0 0 16 16">
                 <path
                   d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                 <path fill-rule="evenodd"
                   d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-              </svg>
+              </svg>-->
             </a>
           </p>
 
-          <a class="dropdown-item perfil text-dark" href="#">Meu perfil</a>
-          <a class="dropdown-item pedidos text-dark" href="#">Meus pedidos</a>
-          <hr class="hr-sair">
-          <a class="dropdown-item sair text-dark" routerLink="/entrar">Sair</a>
+          <a class="dropdown-item perfil text-dark" href="#" routerLink="/entrar">Login</a>
+          <a class="dropdown-item pedidos text-dark" href="#">Cadastrar</a>
+          <!--<hr class="hr-sair">
+          <a class="dropdown-item sair text-dark" (click)="sair()">Sair</a>-->
         </div>
       </div>
     </li>
     <li class="nav-item carrinho ml-4 mr-4">
       <div class="dropdown">
-        <img id="carrinho" src="https://i.imgur.com/r6kMN8t.png" alt="" width="35" height="35" data-toggle="dropdown"
-          aria-expanded="false">
-        <div class="dropdown-menu bloco-sacola">
-          <p class=" text-dark vazio">
-            Seu carrinho está vazio!
-          </p>
-          <img class="sacola" src="https://i.imgur.com/ZZofpRw.png" alt="Sacola de compras ecológica." width="80px"
-            height="80px">
-        </div>
+          <button class="btn btn-info" type="button" data-toggle="modal" data-target="#exampleModalCenter"
+          > Novo Produto</button>
       </div>
     </li>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="produto">Nome do Produto</label>
+            <input [(ngModel)]="produto.nomeProduto" type="text" class="form-control" id="produto" placeholder="Digite o nome do produto">
+          </div>
+
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea [(ngModel)]="produto.descricao" class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="valor">Valor</label>
+            <input [(ngModel)]="produto.valor" type="text" class="form-control" id="valor" placeholder="Digite o valor do produto">
+          </div>
+
+          <div class="form-group">
+            <label for="medida">Medida</label>
+            <input [(ngModel)]="produto.medida" type="text" class="form-control" id="medida" placeholder="Digite medida do produto">
+          </div>
+
+          <div class="form-group">
+            <label for="quantidade">Quantidade</label>
+            <input [(ngModel)]="produto.quantidade" type="text" class="form-control" id="quantidade" placeholder="Digite quantidade do produto">
+          </div>
+          
+          <div class="form-group">
+            <label for="categoria">Escolha a categoria ou <a data-dismiss="modal" routerLink="/categoria">cadastre uma nova</a>:</label>
+            <select class="form-control" name="categoria" id="categoria" [(ngModel)] ='idCategoria' (change)="findByIdCategoria()">
+                <option *ngFor="let item of listaCategorias" value="{{item.id}}">
+                  {{item.tipo}}
+                </option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <li>
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart"
         viewBox="0 0 16 16">
@@ -70,7 +119,7 @@ navbar-dark">
           <li class="li2"><a href="#">Iconography</a></li>
         </ul>
       </li>
-      <li class="li text-dark masculina"><a href="#">Moda Masculina</a>
+      <li class="li masculina"><a href="#">Moda Masculina</a>
         <ul class="dropdown ul2 p-2">
           <li class="li2"><a href="#">Web Development</a></li>
           <li class="li2"><a href="#">Web Design</a></li>
@@ -78,7 +127,7 @@ navbar-dark">
           <li class="li2"><a href="#">Iconography</a></li>
         </ul>
       </li>
-      <li class="li  text-dark infantil"><a href="#">Moda Infantil</a>
+      <li class="li infantil"><a href="#">Moda Infantil</a>
         <ul class="dropdown ul2 p-2">
           <li class="li2"><a href="#">Web Development</a></li>
           <li class="li2"><a href="#">Web Design</a></li>
@@ -86,15 +135,15 @@ navbar-dark">
           <li class="li2"><a href="#">Iconography</a></li>
         </ul>
       </li>
-      <li class="li text-dark acessorios"><a href="#">Acessórios</a>
-        <ul class="dropdown ul2 p-3">
+      <li class="li acessorios"><a href="#">Acessórios</a>
+        <ul class="dropdown ul2 p-2">
           <li class="li2"><a href="#">Web Development</a></li>
           <li class="li2"><a href="#">Web Design</a></li>
           <li class="li2"><a href="#">Illustration</a></li>
           <li class="li2"><a href="#">Iconography</a></li>
         </ul>
       </li>
-      <li class="li text-dark saude"><a href="#">Saúde e Beleza</a>
+      <li class="li saude"><a href="#">Saúde e Beleza</a>
         <ul class="dropdown ul2 p-2">
           <li class="li2"><a href="#">Web Development</a></li>
           <li class="li2"><a href="#">Web Design</a></li>

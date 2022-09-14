@@ -12,7 +12,7 @@
 
 }
 
-/*Input e icon de busca*/
+/* /Input e icon de busca/ */
 .search{
   outline: 0;
   border: none;
@@ -62,9 +62,9 @@
   color: rgb(49, 49, 49);
   font-size: 13px;
 }
-/*fim search, o webkit foi para retirar o botao de cancelar*/
+/* /fim search, o webkit foi para retirar o botao de cancelar/ */
 
-/*Menu e foto*/
+/* /Menu e foto/ */
 .navbar-toggler{
   outline: 0;
   border: 1px solid rgb(85, 85, 85);
@@ -185,7 +185,7 @@
   font-size: 18px;
 }
 .li a{
-  color: black;
+  color: #fff;
 
 }
 
@@ -212,7 +212,7 @@
   box-shadow: 0px 3px 5px -1px rgb(17, 12, 12);
   width: 200px;
   margin-top: 40px;
-  background-color: #fff;
+  background-color: rgba(187, 95, 240, 0.274);
 }
 
 .li2 {
@@ -231,4 +231,3 @@
   transition: all 0.3s ease;
   color: #3ca0e7;
 }
-
