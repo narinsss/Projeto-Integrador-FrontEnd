@@ -106,20 +106,33 @@
   </div>
   
 
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="..." alt="...">
+  
+  <div class="card-deck d-flex justify-content-center mt-3 mb-5">
+
+    <div class="card card-produtos text-center" *ngFor='let item of listaProdutos'>
+      <img src="{{item.foto}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.nomeProduto}}</h5>
+        <h5 class="card-categoria">{{item.categoria.tipo}}</h5>
+        <p class="card-text text-center">{{item.descricao}}</p>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+      <div class="card-footer">
+        <p class="text-muted m-0 p-0">R$: {{item.valor}} | Estoque: {{item.quantidade}} | Medida: {{item.medida}} </p>        
       </div>
+
+      <div class="card-footer">
+        <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-4">Alterar</a>
+        <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Excluir</a>   
+      </div>
+
     </div>
+
+   
+
   </div>
+
+
+
   
   <app-rodape></app-rodape>
 

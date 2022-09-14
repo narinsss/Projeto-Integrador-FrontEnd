@@ -1,1 +1,24 @@
-<p>categoria-delete works!</p>
+<div class="container mt-5 mb-5">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h1 class="text-center text-dark">Apagar Categoria</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4> Você tem certeza que deseja apagar essa categoria? Todas os produtos relacionados a esta categoria serão igualmente apagadas.</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="text-center">Categoria: {{categoria.tipo}}
+        </h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center mt-4">
+        <button class="btn btn-info mr-4" routerLink="/categoria">Não</button>
+        <button class="btn btn-danger" (click)="apagar()">Sim</button>
+      </div>
+    </div>
+  </div>

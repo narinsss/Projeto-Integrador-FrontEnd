@@ -76,6 +76,12 @@ navbar-dark">
             <label for="quantidade">Quantidade</label>
             <input [(ngModel)]="produto.quantidade" type="text" class="form-control" id="quantidade" placeholder="Digite quantidade do produto">
           </div>
+
+          <div class="form-group">
+            <label for="foto">Foto</label>
+            <input [(ngModel)]="produto.foto" type="text" class="form-control" id="foto" placeholder="Link da foto">
+          </div>
+          
           
           <div class="form-group">
             <label for="categoria">Escolha a categoria ou <a data-dismiss="modal" routerLink="/categoria">cadastre uma nova</a>:</label>

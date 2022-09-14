@@ -21,7 +21,7 @@ constructor(
 
  ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/inicio'])
     }
     this.findAllCategorias()
   }

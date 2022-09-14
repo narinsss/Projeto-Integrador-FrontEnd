@@ -8,6 +8,7 @@ public descricao: string
 public valor: number
 public medida: string
 public quantidade: number
+public foto: string
 public usuario: User
 public categoria: Categoria
 

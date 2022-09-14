@@ -6,3 +6,8 @@
     text-align: justify;  
     font-size: 18px; 
 }
+
+.card-produtos{
+    max-width: 400px;
+    max-height: 500px;
+}

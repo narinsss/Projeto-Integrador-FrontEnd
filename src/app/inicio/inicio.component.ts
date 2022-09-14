@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
 
 
 
@@ -16,12 +18,15 @@ import { CategoriaService } from '../service/categoria.service';
 export class InicioComponent implements OnInit {
 
   categoria : Categoria = new Categoria()
+  produto: Produto = new Produto()
   listaCategorias: Categoria[]
+  listaProdutos: Produto[]
 
   constructor(
     private router: Router,
     private authService: AuthService,
-    private categoriaService : CategoriaService
+    private categoriaService : CategoriaService,
+    private produtoService: ProdutoService
 
   ) { }
 
@@ -34,8 +39,15 @@ export class InicioComponent implements OnInit {
     }
 
     this.getAllCategorias()
+    this.getAllProduto()
 
 
+  }
+
+  getAllProduto() {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) =>{
+      this.listaProdutos = resp
+    })
   }
 
   getAllCategorias() {
