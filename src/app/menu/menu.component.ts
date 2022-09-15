@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -13,9 +14,11 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
 
   produto: Produto = new Produto()
+
 
   nome = environment.nome;
   foto = environment.foto;
@@ -38,7 +41,8 @@ export class MenuComponent implements OnInit {
     private router: Router,
     private categoriaService : CategoriaService,
     private produtoService: ProdutoService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    public authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -73,7 +77,7 @@ export class MenuComponent implements OnInit {
   findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
-    }) 
+    })
   }
 
   sair() {
@@ -96,23 +100,11 @@ export class MenuComponent implements OnInit {
       this.alertas.showAlertSuccess('Produto adicionado com sucesso!')
       this.router.navigate(['/inicio'])
       this.produto = new Produto()
-      this.getAllProduto()      
+      this.getAllProduto()
     })
   }
-  modaf(){
+  moda(){
     this.router.navigate(['/inicio'])
   }
-
-  modam(){
-    this.router.navigate(['/inicio'])
-  }
-
-  // botao() {
-  //   if(environment.tipo != 'adm'){
-  //     this.botaoProduto = false
-  //   }
-  // }
-
-
 
 }

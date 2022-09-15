@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {  
+export class AuthService {
 
   constructor(
     private http: HttpClient
@@ -38,5 +38,22 @@ export class AuthService {
     }
     return ok
   }
+
+  deslogado(){
+    let ok: boolean = true
+
+    if(environment.token != ''){
+      ok = false
+    }
+    return ok
+  }
+
+  adm() {
+    let ok: boolean = false
+     if(environment.tipo == 'adm'){
+      ok = true
+     }
+     return ok
+ }
 
 }

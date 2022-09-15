@@ -3,11 +3,11 @@
 }
 
 .card-text{
-    text-align: justify;  
-    font-size: 18px; 
+    text-align: justify;
+    font-size: 25px;
 }
 
 .card-produtos{
     max-width: 400px;
-    max-height: 500px;
+    height: 100%;
 }

@@ -46,15 +46,14 @@
 
   <!--cards-->
 
-  <div class="container-fluid py-3">
+  <div class="container py-3">
     <!-- Card Start -->
     <div class="card">
       <div class="row ">
-
         <div class="col-md-8 px-3">
           <div class="card-block px-6">
-            <h3 class="card-title text-center">Visão</h3>
-            <p class="card-text">
+            <h2 class="card-title text-center">Visão</h2>
+            <p class="card-text text-2">
               A necessidade de implementar soluções eficazes e conscientizar as indústrias e sociedade dos impactos
               ambientais causados pelo formato tradicional de produção e comercialização desses produtos. Trazer
               soluções reais que ajudem a minimizar o impacto causado, e gerar novos formatos de produções sustentáveis
@@ -104,15 +103,15 @@
 
   </div>
   </div>
-  
+
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Catálogo</h1>
       <p class="lead">Conheça nosso catálogo.</p>
     </div>
   </div>
-  
-  <div class="card-deck d-flex justify-content-center mt-3 mb-5" id="modaf">
+
+  <div class="card-deck d-flex justify-content-center mt-3 mb-5" id="moda">
 
     <div class="card card-produtos text-center" *ngFor='let item of listaProdutos'>
       <img src="{{item.foto}}" class="card-img-top" alt="...">
@@ -122,22 +121,15 @@
         <p class="card-text text-center">{{item.descricao}}</p>
       </div>
       <div class="card-footer">
-        <p class="text-muted m-0 p-0">R$: {{item.valor}} | Estoque: {{item.quantidade}} | Medida: {{item.medida}} </p>        
+        <p class="text-muted m-0 p-0">R$: {{item.valor}} | Estoque: {{item.quantidade}} | Medida: {{item.medida}} </p>
       </div>
 
-      <div class="card-footer">
+      <div class="card-footer" *ngIf="authService.adm()">
         <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-4">Alterar</a>
-        <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Excluir</a>   
+        <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Excluir</a>
       </div>
-
     </div>
+  </div>
 
-   
-
-  </div> 
-
-
-
-  
   <app-rodape></app-rodape>
 

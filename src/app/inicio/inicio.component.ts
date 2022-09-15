@@ -21,23 +21,23 @@ export class InicioComponent implements OnInit {
   categoria : Categoria = new Categoria()
   produto: Produto = new Produto()
   listaCategorias: Categoria[]
-  listaProdutos: Produto[]  
+  listaProdutos: Produto[]
 
 
   usuario: User = new User()
   idUser = environment.id
-  
+
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    public authService: AuthService,
     private categoriaService : CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
 
   ) { }
 
   ngOnInit() {
-  
+
     window.scroll(0,0)
 
     if(environment.token == ''){
@@ -60,6 +60,6 @@ export class InicioComponent implements OnInit {
     this.categoriaService.getAllCategoria().subscribe((resp : Categoria[] ) =>{
       this.listaCategorias = resp
     })
-  } 
+  }
 
 }
