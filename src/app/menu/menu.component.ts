@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -37,7 +38,7 @@ export class MenuComponent implements OnInit {
     private router: Router,
     private categoriaService : CategoriaService,
     private produtoService: ProdutoService,
-    private route: ActivatedRoute
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -92,11 +93,18 @@ export class MenuComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
-      alert('Produto adicionado com sucesso!')
+      this.alertas.showAlertSuccess('Produto adicionado com sucesso!')
       this.router.navigate(['/inicio'])
       this.produto = new Produto()
       this.getAllProduto()      
     })
+  }
+  modaf(){
+    this.router.navigate(['/inicio'])
+  }
+
+  modam(){
+    this.router.navigate(['/inicio'])
   }
 
   // botao() {

@@ -19,6 +19,8 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     CategoriaEditComponent,
     CategoriaDeleteComponent,
     ProdutoEditComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    UserEditComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,

@@ -46,12 +46,12 @@
 
   <!--cards-->
 
-  <div class="container py-3">
+  <div class="container-fluid py-3">
     <!-- Card Start -->
     <div class="card">
       <div class="row ">
 
-        <div class="col-md-7 px-3">
+        <div class="col-md-8 px-3">
           <div class="card-block px-6">
             <h3 class="card-title text-center">Visão</h3>
             <p class="card-text">
@@ -65,7 +65,7 @@
           </div>
         </div>
         <!-- Carousel start -->
-        <div class="col-md-5">
+        <div class="col-md-4">
           <div id="CarouselTest" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#CarouselTest" data-slide-to="0" class="active"></li>
@@ -105,9 +105,14 @@
   </div>
   </div>
   
-
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Catálogo</h1>
+      <p class="lead">Conheça nosso catálogo.</p>
+    </div>
+  </div>
   
-  <div class="card-deck d-flex justify-content-center mt-3 mb-5">
+  <div class="card-deck d-flex justify-content-center mt-3 mb-5" id="modaf">
 
     <div class="card card-produtos text-center" *ngFor='let item of listaProdutos'>
       <img src="{{item.foto}}" class="card-img-top" alt="...">

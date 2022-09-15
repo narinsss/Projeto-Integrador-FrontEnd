@@ -15,21 +15,14 @@ navbar-dark">
         <div class="dropdown-menu">
           <p class="dropdown-item text-dark usuario">
             {{nome}}
-            <a href="#">
-              <!--<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                class="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path
-                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                <path fill-rule="evenodd"
-                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-              </svg>-->
-            </a>
+            
           </p>
 
           <a class="dropdown-item perfil text-dark" href="#" routerLink="/entrar">Login</a>
-          <a class="dropdown-item pedidos text-dark" href="#">Cadastrar</a>
-          <!--<hr class="hr-sair">
-          <a class="dropdown-item sair text-dark" (click)="sair()">Sair</a>-->
+          <a class="dropdown-item pedidos text-dark" href="#" routerLink="/cadastrar">Cadastrar</a>
+          <a class="dropdown-item pedidos text-dark" href="#" [routerLink]="['/user-edit', id]">Editar</a>
+          <hr class="hr-sair">
+          <a class="dropdown-item sair text-dark" (click)="sair()">Sair</a>
         </div>
       </div>
     </li>
@@ -117,45 +110,15 @@ navbar-dark">
 </nav>
 <nav class="navbar navbar-expand-lg nav-interna">
   <div class="collapse navbar-collapse ul" id="navbarSupportedContent">
-      <li class="li feminina"><a href="#">Moda Feminina</a>
-        <ul class="dropdown ul2 p-2">
-          <li class="li2"><a href="#">Web Development</a></li>
-          <li class="li2"><a href="#">Web Design</a></li>
-          <li class="li2"><a href="#">Illustration</a></li>
-          <li class="li2"><a href="#">Iconography</a></li>
-        </ul>
+      <li class="li feminina"><a href="#modaf" (click)="modaf()">Moda Feminina</a>
       </li>
-      <li class="li masculina"><a href="#">Moda Masculina</a>
-        <ul class="dropdown ul2 p-2">
-          <li class="li2"><a href="#">Web Development</a></li>
-          <li class="li2"><a href="#">Web Design</a></li>
-          <li class="li2"><a href="#">Illustration</a></li>
-          <li class="li2"><a href="#">Iconography</a></li>
-        </ul>
+      <li class="li masculina"><a href="#modam" (click)="modaf()">Moda Masculina</a>
       </li>
       <li class="li infantil"><a href="#">Moda Infantil</a>
-        <ul class="dropdown ul2 p-2">
-          <li class="li2"><a href="#">Web Development</a></li>
-          <li class="li2"><a href="#">Web Design</a></li>
-          <li class="li2"><a href="#">Illustration</a></li>
-          <li class="li2"><a href="#">Iconography</a></li>
-        </ul>
       </li>
       <li class="li acessorios"><a href="#">Acessórios</a>
-        <ul class="dropdown ul2 p-2">
-          <li class="li2"><a href="#">Web Development</a></li>
-          <li class="li2"><a href="#">Web Design</a></li>
-          <li class="li2"><a href="#">Illustration</a></li>
-          <li class="li2"><a href="#">Iconography</a></li>
-        </ul>
       </li>
       <li class="li saude"><a href="#">Saúde e Beleza</a>
-        <ul class="dropdown ul2 p-2">
-          <li class="li2"><a href="#">Web Development</a></li>
-          <li class="li2"><a href="#">Web Design</a></li>
-          <li class="li2"><a href="#">Illustration</a></li>
-          <li class="li2"><a href="#">Iconography</a></li>
-        </ul>
       </li>
   </div>
 
