@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
@@ -29,12 +29,15 @@ export class MenuComponent implements OnInit {
   idUser = environment.id
   listaProdutos : Produto[]
 
+  botaoProduto = true
+
 
 
   constructor(
     private router: Router,
     private categoriaService : CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -48,7 +51,7 @@ export class MenuComponent implements OnInit {
   }
 
   validarFoto() {
-    if (environment.foto == null) {
+    if (environment.foto == null || environment.foto == '') {
       this.foto = 'https://i.imgur.com/6yeHR7M.png';
     }
   }
@@ -90,10 +93,17 @@ export class MenuComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
       alert('Produto adicionado com sucesso!')
+      this.router.navigate(['/inicio'])
       this.produto = new Produto()
-      this.getAllProduto()
+      this.getAllProduto()      
     })
   }
+
+  // botao() {
+  //   if(environment.tipo != 'adm'){
+  //     this.botaoProduto = false
+  //   }
+  // }
 
 
 

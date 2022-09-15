@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
@@ -20,7 +21,12 @@ export class InicioComponent implements OnInit {
   categoria : Categoria = new Categoria()
   produto: Produto = new Produto()
   listaCategorias: Categoria[]
-  listaProdutos: Produto[]
+  listaProdutos: Produto[]  
+
+
+  usuario: User = new User()
+  idUser = environment.id
+  
 
   constructor(
     private router: Router,
@@ -54,7 +60,6 @@ export class InicioComponent implements OnInit {
     this.categoriaService.getAllCategoria().subscribe((resp : Categoria[] ) =>{
       this.listaCategorias = resp
     })
-  }
-
+  } 
 
 }
