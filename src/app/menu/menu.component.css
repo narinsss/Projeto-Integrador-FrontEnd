@@ -165,3 +165,22 @@
 .li:hover {
   cursor: pointer;
 }
+
+.novoProduto {
+  border-radius: 50px;
+  background-color: #fff;
+  width: 100%;
+
+}
+
+.novoProduto:hover {
+  box-shadow: 1px 10px 20px #7f6fad, 1px 10px 20px #b59ff2;
+  margin-top: -5px;
+
+}
+
+.novoProduto:active {
+  box-shadow: inset 1px 5px 15px #99c2ec;
+  margin-top: 2px;
+
+}
