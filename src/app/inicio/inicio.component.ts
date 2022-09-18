@@ -22,6 +22,7 @@ export class InicioComponent implements OnInit {
   produto: Produto = new Produto()
   listaCategorias: Categoria[]
   listaProdutos: Produto[]
+  nomeProduto: string
 
 
   usuario: User = new User()
@@ -62,4 +63,5 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  
 }

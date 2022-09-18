@@ -1,13 +1,16 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .lead{
     font-size: 20pt;
 }
 
-.card-text{
+.textola{
     text-align: justify;
     font-size: 25px;
 }
 
 .card-produtos{
-    max-width: 400px;
-    height: 100%;
+    max-width: 350px;
 }

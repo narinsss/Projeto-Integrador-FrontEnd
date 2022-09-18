@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
   nome = environment.nome;
   foto = environment.foto;
   id = environment.id;
-
+  idProduto: number
   idCategoria: number
   listaCategorias : Categoria[]
 
@@ -34,6 +34,7 @@ export class MenuComponent implements OnInit {
   listaProdutos : Produto[]
 
   botaoProduto = true
+  nomeProduto: string
 
 
 
@@ -106,5 +107,19 @@ export class MenuComponent implements OnInit {
   moda(){
     this.router.navigate(['/inicio'])
   }
+
+  /*findByNomeProduto(){
+    if(this.nomeProduto == ''){
+      this.getAllProduto()
+    }else{
+      this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produto[]) => {
+        this.listaProdutos = resp
+      })
+    }
+  }
+  produtos(event: any){
+    this.idProduto = event.target.value
+  }*/
+
 
 }
