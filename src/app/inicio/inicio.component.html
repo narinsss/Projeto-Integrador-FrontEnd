@@ -115,7 +115,7 @@
     </div>
   </div>
 
-  <div class="card-deck d-flex justify-content-center mt-3 mb-5" id="moda">
+  <div class="card-deck d-flex justify-content-center mt-3 mb-5 p-2" id="moda">
 
     <div class="card card-produtos text-center" *ngFor='let item of listaProdutos'>
       <img src="{{item.foto}}" class="card-img-top" alt="...">
@@ -127,7 +127,10 @@
       <div class="card-footer">
         <p class="text-muted m-0 p-0">R$: {{item.valor}} | Estoque: {{item.quantidade}} | Medida: {{item.medida}} </p>
       </div>
-
+      <div class="card-footer" *ngIf="authService.normal()">
+        <img src="https://i.imgur.com/a3gOjG7.png" width="40px" height="40px" alt="">
+        <button type="button" class="btn btn-warning ml-5">Comprar</button>
+      </div>
       <div class="card-footer" *ngIf="authService.adm()">
         <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-4">Alterar</a>
         <a [routerLink]="['/produto-delete', item.id]" class="text-danger">Excluir</a>

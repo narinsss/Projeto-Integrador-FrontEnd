@@ -56,4 +56,14 @@ export class AuthService {
      return ok
  }
 
+ normal() {
+  let ok: boolean = false
+  if(environment.tipo == 'normal'){
+    ok = true
+  }else if(environment.token == ''){
+    ok = true
+  }
+  return ok
+}
+
 }

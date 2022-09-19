@@ -10,7 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
-import { SobreComponent } from './sobre/sobre.component';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { CategoriaComponent } from './categoria/categoria.component';
@@ -29,7 +28,6 @@ import { AlertasComponent } from './alertas/alertas.component';
     RodapeComponent,
     CadastrarComponent,
     EntrarComponent,
-    SobreComponent,
     InicioComponent,
     CategoriaComponent,
     CategoriaEditComponent,
