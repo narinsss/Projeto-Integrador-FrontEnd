@@ -15,19 +15,19 @@ export class AuthService {
     ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post<UserLogin>('https://acquacode.herokuapp.com/swagger-ui/index.html#/usuario-controller/login', userLogin)
   }
 
   cadastrar(user: User): Observable<User>{
-    return this.http.post<User>('http://localhost:8080/usuario/cadastrar', user)
+    return this.http.post<User>('https://acquacode.herokuapp.com/swagger-ui/index.html#/usuario-controller/postUsuario', user)
   }
 
   atualizar(user: User): Observable<User>{
-    return this.http.put<User>('http://localhost:8080/usuario/atualizar', user)
+    return this.http.put<User>('https://acquacode.herokuapp.com/swagger-ui/index.html#/usuario-controller/putUsuario', user)
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuario/${id}`)
+    return this.http.get<User>(`https://acquacode.herokuapp.com/swagger-ui/index.html#/usuario-controller/getById`)
   }
 
   logado(){
