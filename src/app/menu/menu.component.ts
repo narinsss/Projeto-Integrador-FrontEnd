@@ -99,6 +99,7 @@ export class MenuComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
       this.alertas.showAlertSuccess('Produto adicionado com sucesso!')
+      this.alertas.showAlertInfo('Atualize a página para visualizar!')
       this.router.navigate(['/inicio'])
       this.produto = new Produto()
       this.getAllProduto()
