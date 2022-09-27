@@ -26,6 +26,9 @@ export class CategoriaService {
     return this.http.get<Categoria>(`https://acquacode.herokuapp.com/categoria/${id}`, this.token)
   }
 
+  getByTipoCategoria(tipo: string): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`https://acquacode.herokuapp.com/categoria/tipo/${tipo}`, this.token)
+  }
 
   postCategoria(categoria: Categoria): Observable<Categoria>{
     return this.http.post<Categoria>('https://acquacode.herokuapp.com/categoria', categoria, this.token)

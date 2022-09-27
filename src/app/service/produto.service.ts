@@ -25,7 +25,7 @@ export class ProdutoService {
   }
 
   getByNomeProduto(nomeProduto: string): Observable<Produto[]>{
-    return this.http.get<Produto[]>(`https://acquacode.herokuapp.com/produto/${nomeProduto}`, this.token)
+    return this.http.get<Produto[]>(`https://acquacode.herokuapp.com/produto/nomeProduto/${nomeProduto}`, this.token)
   }
 
 

@@ -29,7 +29,7 @@ constructor(
     this.findAllCategorias()
   }
 
-findAllCategorias(){
+ findAllCategorias(){
     this.categoriaService.getAllCategoria().subscribe((resp:Categoria[]) => {
       this.listaCategorias = resp
     })
