@@ -57,7 +57,7 @@ export class MenuComponent implements OnInit {
   }
 
   validarFoto() {
-    if (environment.foto == null || environment.foto == '') {
+    if (environment.foto == "") {
       this.foto = 'https://i.imgur.com/6yeHR7M.png';
     }
   }
